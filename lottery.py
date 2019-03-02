@@ -20,8 +20,8 @@ while a == 1:
         print("You failed!")
         print("Current balance: $", bal)
 
-    b = str(input("Want replay? ('yes' or 'no')"))
-    if b == 'yes':
+    b = str(input("Want replay? ('yes' or 'no') "))
+    if b != 'no':
         if bal < 10:
             print("You haven`t enough money.")
             a = 0
