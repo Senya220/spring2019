@@ -2,7 +2,7 @@ import random as r
 import time as t
 
 a = 1
-win = [0, 1]
+win = [0, 0, 0, 1, 1]
 bal = 0
 
 print("♥💰Lucky Lottery💰♥")
@@ -13,8 +13,8 @@ while a == 1:
     t.sleep(2)
     won = r.choice(win)
     if won == 1:
-        print("You win $10!")
-        bal = bal + 10
+        print("You win $5!")
+        bal = bal + 15
         print("Current balance: $", bal)
     if won == 0:
         print("You failed!")
