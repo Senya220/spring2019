@@ -1,4 +1,5 @@
 import random as r
+import time as t
 
 a = 1
 win = [0, 1]
@@ -6,7 +7,10 @@ bal = 0
 
 print("♥💰Lucky Lottery💰♥")
 
-while a == 'no':
+while a == 1:
+    t.sleep(1)
+    print("Starting game...")
+    t.sleep(2)
     won = r.choice(win)
     if won == 1:
         print("You win $10!")
