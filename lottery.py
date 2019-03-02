@@ -2,7 +2,7 @@ import random as r
 import time as t
 
 a = 1
-win = [0, 0, 0, 1, 1]
+win = [0, 1]
 bal = 0
 
 print("♥💰Lucky Lottery💰♥")
