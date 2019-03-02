@@ -13,7 +13,7 @@ while a == 1:
     t.sleep(2)
     won = r.choice(win)
     if won == 1:
-        print("You win $5!")
+        print("You win $15!")
         bal = bal + 15
         print("Current balance: $", bal)
     if won == 0:
