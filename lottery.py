@@ -36,4 +36,3 @@ while a == 1:
 
 print("Game ended.")
 print("Goodbye!")
-
