@@ -1,7 +1,7 @@
 import time
 
 outpt = open('Output.txt', 'a')
-inpt = str(input("Input encrypted text here (If tou input numbers, they may be decrypted!!!): "))
+inpt = str(input("Input encrypted text here (If you input numbers, they may be decrypted!!!): "))
 a = 0
 b = 0
 lst = []
