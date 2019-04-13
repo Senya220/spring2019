@@ -11,6 +11,8 @@
 
 import turtle as t
 
+# Functions:
+
 
 def draw_square(color, size_f):
     t.begin_fill()
@@ -29,45 +31,52 @@ def draw_square(color, size_f):
     t.end_fill()
 
 
-def draw_flower(size):
-    t.goto(60, 60)
+def draw_flower(size, x, y, color, color_center):
+    print(str("Drawing " + color + " flower with " + color_center + " center."))
+    t.goto(x+size, y+size)
     t.pendown()
-    draw_square('purple', size)
-    t.goto(-60, -60)
-    draw_square('orange', size)
-    t.goto(-60, 60)
-    draw_square('pink', size)
-    t.goto(60, -60)
-    draw_square('blue', size)
-    t.goto(0, 0)
-    t.color('blue')
-    draw_square('yellow', size)
+    draw_square(color, size)
+    t.goto(x-size, y-size)
+    draw_square(color, size)
+    t.goto(x-size, y+size)
+    draw_square(color, size)
+    t.goto(x+size, y-size)
+    draw_square(color, size)
+    t.goto(x, y)
+    t.color(color)
+    draw_square(color_center, size)
     t.shape("turtle")
     t.hideturtle()
     t.penup()
 
 
-t.speed(10)
-
-# ------------------------
-t.penup()
-t.goto(-200, 200)
-a = abs(t.pos())
-t.pendown()
-t.color('red', 'yellow')
-t.begin_fill()
-while True:
-    t.forward(200)
-    t.left(170)
-    b = abs(t.pos())
-    if a - 1 < b < a + 1:
-        break
-t.penup()
-t.end_fill()
-
-# ------------------------
+def draw_sun():
+    t.penup()
+    t.goto(-200, 200)
+    a = abs(t.pos())
+    t.pendown()
+    t.color('orange', 'yellow')
+    t.begin_fill()
+    while True:
+        t.forward(200)
+        t.left(170)
+        b = abs(t.pos())
+        if a - 1 < b < a + 1:
+            break
+    t.penup()
+    t.end_fill()
 
 
-draw_flower(70)
+# --------------------
+
+t.speed(0)
+
+draw_sun()
+draw_flower(50, 40, 40, "green", "yellow")
+draw_flower(70, -140, -140, "black", "green")
+draw_flower(50, 0, -100, "pink", "navy")
+draw_flower(50, 80, 145, "navy", "cyan")
+draw_flower(50, 100, -150, "orange", "yellow")
+
 
 t.exitonclick()
