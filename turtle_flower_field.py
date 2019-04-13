@@ -1,15 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-"""
-Техническое задание:
-На основе цветочка из квадратов, сделанного в первой итерации,
-нарисовать картину из этого цветочка и солнышка.
-Солнышко такое как тут, подойдет https://docs.python.org/3.7/library/turtle.html
-В будущем ожидаю увидеть поле из разных цветов. Может, сделать цветок красивее.
-"""
-
 import turtle as t
+import time as w
+from random import randint, choice
 
 # Functions:
 
@@ -67,16 +61,26 @@ def draw_sun():
     t.end_fill()
 
 
+colors = ["black", "cyan", "navy", "blue", "red", "yellow", "orange", "green"]
+
 # --------------------
 
 t.speed(0)
 
-draw_sun()
-draw_flower(50, 40, 40, "green", "yellow")
-draw_flower(70, -140, -140, "black", "green")
-draw_flower(50, 0, -100, "pink", "navy")
-draw_flower(50, 80, 145, "navy", "cyan")
-draw_flower(50, 100, -150, "orange", "yellow")
+# draw_sun()
 
 
+# draw_flower(50, 40, 40, "green", "yellow")
+# draw_flower(70, -140, -140, "black", "green")
+# draw_flower(50, 0, -100, "pink", "navy")
+# draw_flower(50, 80, 145, "navy", "cyan")
+# draw_flower(50, 100, -150, "orange", "yellow")
+i = 10000000
+
+for g in range(i):
+    i = i+1
+    draw_flower(randint(50, 100), randint(-300, 300), randint(-300, 300), choice(colors), choice(colors))
+    w.sleep(0.0001)
+
+# r.randint(-300, 300)
 t.exitonclick()
