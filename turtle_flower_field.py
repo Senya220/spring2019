@@ -5,8 +5,6 @@ import turtle as t
 import time as w
 from random import randint, choice
 
-# Functions:
-
 
 def draw_square(color, size_f):
     t.begin_fill()
@@ -37,34 +35,16 @@ def draw_circle(color, size_f):
     t.penup()
 
 
-
-def draw_flower(size, x, y, color, color_center, angle):
-    print(str("Drawing " + color + " flower with " + color_center + " center."))
+def draw_flower(size, x, y, color, color_center, angle, n):
+    print(str("Drawing " + str(n) + "-petal " + color + " flower with " + color_center + " center at position x:" + str(x) + " and y:" + str(y) + "."))
     t.goto(x, y)
 
-    t.setheading(angle)
-    t.forward(size * 2.5)
-    t.setheading(angle + 90)
-    draw_circle(color, size)
-    t.goto(x, y)
-
-    t.setheading(angle + 90)
-    t.forward(size * 2.5)
-    t.setheading(angle + 180)
-    draw_circle(color, size)
-    t.goto(x, y)
-
-    t.setheading(angle + 180)
-    t.forward(size * 2.5)
-    t.setheading(angle + 270)
-    draw_circle(color, size)
-    t.goto(x, y)
-
-    t.setheading(angle + 270)
-    t.forward(size * 2.5)
-    t.setheading(angle + 360)
-    draw_circle(color, size)
-    t.goto(x, y)
+    for j in range(n):
+        t.setheading(angle + (360 * j // n))
+        t.forward(size * 2.5)
+        t.setheading(angle + (360 * j // n + 90))
+        draw_circle(color, size)
+        t.goto(x, y)
 
     t.setheading(90)
     t.forward(size * 1)
@@ -112,7 +92,7 @@ draw_sun()
 
 for g in range(i):
     i = i+1
-    draw_flower(randint(10, 40), randint(-300, 300), randint(-300, 50), choice(colors), choice(colors), randint(0, 90))
+    draw_flower(randint(10, 40), randint(-300, 300), randint(-300, 50), choice(colors), choice(colors), randint(0, 90), randint(3, 6))
     w.sleep(0.0001)
 
 print("Finished")
