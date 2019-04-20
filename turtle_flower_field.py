@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 
 import turtle as t
-import time as w
 from random import randint, choice
 
 
