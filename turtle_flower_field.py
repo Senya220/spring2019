@@ -105,6 +105,7 @@ draw_sun()
 
 # ---------------------------------------------------------------------
 # Examples:
+#
 #   draw_flower(Size, X, Y, PetalColor, CenterColor, Angle, PetalCount)
 #
 #   randint(1, 6)
@@ -117,7 +118,7 @@ draw_sun()
 
 for i in range(4):
     draw_flower(30, i * 100 + 50, i * 20, choice(colors), choice(colors), randint(-90, 180), randint(5, 7))
-    draw_flower(30, i * -100 - 50, i * 20, choice(colors), choice(colors), randint(-90, 180), randint(5, 6))
+    draw_flower(30, i * -100 - 50, i * 20, choice(colors), choice(colors), randint(-90, 180), randint(5, 7))
 
 for i in range(3):
     draw_flower(35, i * 100 + 80, i * 20 - 120, choice(colors), choice(colors), randint(-90, 180), randint(5, 7))
@@ -127,7 +128,6 @@ for i in range(3):
     draw_flower(40, i * 100 + 70, i * 20 - 250, choice(colors), choice(colors), randint(-90, 180), randint(5, 7))
     draw_flower(40, i * -100 - 70, i * 20 - 250, choice(colors), choice(colors), randint(-90, 180), randint(5, 7))
 
-draw_stick(0, -50)
 draw_flower(40, 0, -50, "navy", "cyan", 0, 7)
 
 print("Finished")
