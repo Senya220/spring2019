@@ -1,9 +1,8 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
 import turtle as t
 from random import randint, choice
+import rainbow as r
 
+t.colormode(255)
 
 def draw_square(color, size_f):
     t.begin_fill()
@@ -102,6 +101,7 @@ t.speed(0)
 t.pensize(3)
 
 draw_sun()
+r.rainbow(600, 300, -100)
 
 # ---------------------------------------------------------------------
 # Examples:
